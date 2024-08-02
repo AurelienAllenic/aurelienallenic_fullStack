@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "Geomanist";
+    src: url("/Geomanist-Regular&Italic/Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.woff");
+    }
+    @font-face {
+      font-family: "Creo";
+      src: url("/creo/Creo-ExtraLight.ttf");
+      }
+      @font-face {
+        font-family: "Lemon";
+        src: url("/lemon_milk/LEMONMILK-Light.otf");
+        }
+        @font-face {
+          font-family: "Maven";
+          src: url("/maven/MavenPro-VariableFont_wght.ttf");
+          }
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-family: "Lemon";
+  letter-spacing: 0.2rem;
+}
+.sub-title {
+  font-family: "Creo";
+}
+p, .navbar_link, li, button, a, .container_cv::after, .sub-title-contact{
+  font-family: "Maven";
+}
+body{
+  font-family: "Geomanist";
+  -webkit-tap-highlight-color: transparent;
+  color: black;
+}
+@keyframes apparition {
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  50%{
+    display: inherit;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+section{
+  margin-top: 20%;
+}
+[id='no_border']{
+  border-bottom: none;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+li{
+  list-style: none;
+}
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.animation-apparition{
+  animation: apparition 1s forwards;
+}
+a.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+.container_all_app{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.scrollToTop{
+  position: absolute;
+  right: 2%;
+}
+button{
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@keyframes hideConfirmation {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+  }
+@keyframes moveText {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes languages {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 0;
+  }
+}
+@keyframes button_languages {
+  to {
+          transform: scale(1.08);
+          transition: all smooth 1s;
+  }
+}
+@keyframes arrow_languages {
+  to {
+          transform: rotate(360deg);
+          transition: all ease 1s;
+  }
+}

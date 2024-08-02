@@ -1,0 +1,246 @@
+@keyframes confirmation {
+    0%{
+        opacity: 0;
+    }25%{
+        opacity: 0.25;
+    }50%{
+        opacity: 0.5;
+    }75%{
+        opacity: 0.75;
+    }100%{
+        opacity: 1;
+    }
+}
+@keyframes hideConfirmation {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+    }
+.overflow{
+    overflow: hidden;
+}
+.section-contact{
+    height: 100%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 2% 4% 2%;
+    z-index:5;
+}
+.container_inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.container_single_input{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1% 1% 1% 0%;
+    &::placeholder{
+        color: black;
+    }
+    &:focus{
+        border-bottom: 2px solid black;
+        outline: none;
+        transition: all ease 0.5s;
+    }
+    &:hover{
+        border-bottom: 2px solid black;
+        outline: none;
+        transition: all ease 0.2s;
+        cursor: pointer;
+    }
+}
+.textarea{
+    border: none;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 1% 1% 1% 1%;
+    color: black;
+    font-size: 1rem;
+    resize: none;
+    height: auto;
+    width: 80%;
+    &::placeholder{
+        color: black;
+    }
+    &:focus{
+        border: 2px solid black;
+        outline: none;
+        transition: all ease 0.2s;
+    }
+    &:hover{
+        border: 2px solid black;
+        outline: none;
+        transition: all ease 0.2s;
+        cursor: pointer;
+    }
+}
+.btn-submit{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    font-size: 1.2rem;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 15px;
+    animation: button_languages 0.7s ease-out infinite alternate;
+    transition: all ease 0.3s;
+    &:hover{
+        outline: none;
+        transition: all ease 0.5s;
+        cursor: pointer;
+        background-color: #101010;
+        color: white;
+        svg{
+            animation: arrow_languages 0.5s ease;
+            transition: all ease 0.9s;
+            fill: white;
+        }
+    }
+}
+.main-title-contact{
+color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.3rem;
+letter-spacing: 0.1em;
+text-align: center;
+}
+.sub-title-contact{
+color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.2em;
+font-weight: 300;
+letter-spacing: 0.15em;
+text-align: center;
+}
+.container_confirmation_contact{
+    height: 120%;
+    width: 100%;
+    background-color: #101010;
+    position: absolute;
+    z-index: 99999999;
+    animation: confirmation both;
+}
+.content_confirmation_contact{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: black;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+.hide-confirmation-contact {
+    animation: hideConfirmation 0.6s both;
+}
+@media(min-width: 553px){
+    .input{
+        font-size: 1.3rem;
+    }
+    .textarea{
+        width: 350px;
+        font-size: 1.2rem;
+    }
+    .btn-submit{
+        padding: 2%;
+        font-size: 1.3rem;
+    }
+}
+@media(min-width: 720px){
+    .input{
+        font-size: 1.4rem;
+    }
+    .textarea{
+        width: 450px;
+        font-size: 1.3rem;
+    }
+    .main-title-contact{
+        font-size: 1.5rem;
+    }
+    .section-contact{
+        margin-top: 10%;
+    }
+}
+@media(min-width: 816px){
+    .input{
+        font-size: 1.5rem;
+    }
+    .textarea{
+        width: 500px;
+        font-size: 1.4rem;
+        padding-bottom: 10%;
+    }
+    .main-title-contact{
+        font-size: 1.5rem;
+    }
+    .btn-submit{
+        padding: 1.5%;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
+@media(min-width: 1036px){
+    .input{
+        font-size: 1.6rem;
+    }
+    .textarea{
+        width: 500px;
+        font-size: 1.5rem;
+        padding-bottom: 10%;
+    }
+    .main-title-contact{
+        font-size: 1.8rem;
+    }
+    .container_inputs{
+        flex-direction: row;
+    }
+    .container_single_input{
+        position: relative;
+    }
+    .error{
+        position: absolute;
+        bottom: 140%;
+    }
+    .btn-submit{
+        padding: 1%;
+        gap: 0.5rem;
+        font-size: 1.7rem;
+    }
+}
+@media(min-width: 1207px){
+    .input{
+        font-size: 1.6rem;
+    }
+    .textarea{
+        width: 700px;
+        font-size: 1.5rem;
+    }
+    .main-title-contact{
+        font-size: 2.5rem;
+    }
+}
+@media(min-width: 1247px){
+    .textarea{
+        width: 800px;
+    }
+}

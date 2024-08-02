@@ -1,0 +1,292 @@
+  .section-languages {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0rem;
+    height: 56vh;
+    margin-top: 100px;
+  
+    .container-languages {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+  
+    .container-two-languages {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10%;
+  
+      .container_langages_cards {
+        flex: 1;
+        width: 80%;
+        margin: 1%;
+        position: absolute;
+        left: 5%;
+        height: 500px;
+      }
+    }
+    .container_title_button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        vertical-align: top;
+        margin-bottom: 2%;
+    }
+    .btn_card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: black;
+        border-radius: 15px;
+        font-size: 1rem;
+        padding: 3%;
+        margin-bottom: 10%;
+        gap: 0.5rem;
+        transition: all ease 0.5s;
+        animation: button_languages 0.7s ease-out infinite alternate;
+        
+        &:hover{
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            
+            border: 1px solid black;
+        }svg{
+          animation: arrow_languages 1s ease infinite;
+          transition: all ease 0.9s;
+      }
+    }
+    .main-title-languages {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  
+    .languages_list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .card_front {
+      display: flex;
+      flex-direction: column;
+      padding: 2% 4% 4% 4%;
+      gap: 1em;
+      background-color: white;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      width: 25%;
+      right: -10%;
+      border-radius: 25px;
+      animation: apparition 0.5s ease-out;
+      box-shadow: -27px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      min-width: fit-content;
+    }
+  
+    .main_title_card {
+      font-size: 1rem;
+      color: black;
+      letter-spacing: 0.1em;
+      margin-bottom: 10%;
+    }
+  
+    .underline {
+      display: inline-block;
+      position: relative;
+  
+      &::after {
+        content: "";
+        height: 2px;
+        width: 60px;
+        background-color: #101010;
+        position: absolute;
+        bottom: -.5em;
+        left: -.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  
+    .list_card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      gap: 1rem;
+  
+      li {
+        margin: 2%;
+        text-align: center;
+        font-size: 1em;
+        color: #101010;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    }
+  
+    .description {
+      background-color: rgb(248, 248, 248);
+      width: 15%;
+      padding: 2%;
+      border-radius: 25px;
+      position: absolute;
+      right: 10%;
+      top: 25%;
+      font-size: 1.1em;
+      letter-spacing: 0.03em;
+      line-height: 1.8em;
+    }
+  
+    .position-animation-front {
+      height: 100%;
+      position: relative;
+      width: 100%;
+      margin-top: 50%;
+    }
+  
+    .animation_languages {
+      transition: all ease languages 3s forwards;
+    }
+  
+    @media (min-width: 414px) {
+      .main-title-languages {
+        font-size: 1.8rem;
+      }
+    }
+  
+    @media (min-width: 558px) {
+      .main-title-languages {
+        font-size: 2.4rem;
+        margin-bottom: 0%;
+      }
+  
+      .position-animation-front {
+        height: 90%;
+      }
+      .section-languages {
+        height: 65vh;
+      }
+    }
+  
+    @media (min-width: 628px) {
+      .main-title-languages {
+        font-size: 2rem;
+      }
+  
+      .list_card li {
+        font-size: 1.2em;
+      }
+  
+      .main_title_card {
+        font-size: 1.3rem;
+      }
+  
+      .languages_list {
+        margin-top: 15%;
+      }
+  
+  
+      .section-languages {
+        padding: 0 0 40% 0;
+      }
+  
+      .container-two-languages {
+        margin-top: 15%;
+      }
+      .position-animation-front {
+        margin-top: 40%;
+      }
+      .container_langages_cards {
+        height: 500px;
+      }
+    }
+  
+    @media (min-width: 848px) {
+      .container_langages_cards {
+        height: 600px;
+      }
+      .position-animation-front {
+        margin-top: 30%;
+      }
+    }
+  
+    @media (min-width: 1004px) {
+      .container_langages_cards {
+        height: 700px;
+      }
+      .position-animation-front {
+        margin-top: 20%;
+      }
+  
+      .languages_list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card_front{
+          top: 70%;
+      }
+      .container_title_button{
+        gap: 1rem;
+      }
+    }
+  
+    @media (min-width: 1236px) {
+      .container_langages_cards {
+        height: 750px;
+      }
+      .container_title_button{
+        gap: 1.3rem;
+      }
+      .position-animation-front {
+        margin-top: 17%;
+      }
+      .container-two-languages {
+        margin-top: 10%;
+      }
+    }
+  
+    @media (min-width: 1386px) {
+      .position-animation-front {
+        margin-top: 15%;
+      }
+      .container_title_button{
+        gap: 1.5rem;
+      }
+      .section-languages .container-two-languages{
+        margin-top: 0%;
+      }
+    }
+  
+    @media (min-width: 1500px) {
+      .section-languages {
+        padding: 0 0 22% 0;
+      }
+      .container_langages_cards {
+        height: 950px;
+      }
+      .position-animation-front {
+        margin-top: 10%;
+      }
+      .card_front{
+        top: 60%;
+      }
+      .container_title_button{
+        gap: 2rem;
+      }
+    }
+  }
